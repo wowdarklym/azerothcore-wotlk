@@ -6,14 +6,14 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 DROP TABLE IF EXISTS `linked_respawn`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = UTF8MB4 */;
 CREATE TABLE `linked_respawn` 
 (
-  `guid` int(10) unsigned NOT NULL COMMENT 'dependent creature',
-  `linkedGuid` int(10) unsigned NOT NULL COMMENT 'master creature',
-  `linkType` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `guid` INT unsigned NOT NULL COMMENT 'dependent creature',
+  `linkedGuid` INT unsigned NOT NULL COMMENT 'master creature',
+  `linkType` TINYINT unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`guid`,`linkType`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Creature Respawn Link System';
+) ENGINE=MyISAM DEFAULT CHARSET=UTF8MB4 ROW_FORMAT=DYNAMIC COMMENT='Creature Respawn Link System';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `linked_respawn` WRITE;
@@ -1745,9 +1745,6 @@ INSERT INTO `linked_respawn` VALUES
 (79277,79168,0),
 (79280,79223,0),
 (79281,79223,0),
-(79283,79206,0),
-(79284,79206,0),
-(79285,79206,0),
 (79292,79337,0),
 (79294,79337,0),
 (79296,79337,0),
@@ -1805,7 +1802,6 @@ INSERT INTO `linked_respawn` VALUES
 (79365,79362,0),
 (79366,79362,0),
 (79367,79339,0),
-(79368,79336,0),
 (79370,79336,0),
 (79371,79339,0),
 (79372,79339,0),
@@ -1814,11 +1810,7 @@ INSERT INTO `linked_respawn` VALUES
 (79375,79339,0),
 (79376,79206,0),
 (79377,79206,0),
-(79378,79206,0),
-(79379,79206,0),
-(79380,79206,0),
 (79382,79362,0),
-(79383,79336,0),
 (79384,79336,0),
 (79385,79336,0),
 (79386,79339,0),

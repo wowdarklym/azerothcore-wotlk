@@ -2,23 +2,31 @@
 # AzerothCore
 #
 
-conf/*
-!conf/*.dist
-modules/*
+/conf/*
+!/conf/dist
+/modules/*
+!/modules/*.md
+!/modules/*.sh
+/build*/
+/var/*
+!/var/build/.gitkeep
+!/var/ccache/.gitkeep
+/env/dist/*
+!/env/dist/.gitkeep
+/env/user/*
+/env/docker/*
+!/env/docker/bin/.gitkeep
+!/env/docker/data/.gitkeep
+!/env/docker/etc/authserver.conf.dockerdist
+!/env/docker/etc/worldserver.conf.dockerdist
+!/env/docker/logs/.gitkeep
+/.env*
+/apps/joiner
+/deps/deno
 
-#
-# Allow modules to control git ignoring
-#
-!modules/*
-modules/*/*
-!modules/*/.gitignore
-!modules/uwd/*
-modules/uwd/joiner
-!modules/hw-core/*
-!modules/acore/*
-!modules/worldengine/*
+/docker-compose.override.yml
 
-build*/
+!.gitkeep
 
 #
 #Generic
@@ -42,7 +50,7 @@ CMakeLists.txt.user
 *.LOCAL.*
 
 #
-# IDE & other softwares
+# IDE & other software
 #
 /.settings/
 /.externalToolBuilders/*
@@ -51,7 +59,10 @@ nbproject/
 .sync.ffs_db
 *.kate-swp
 .browse.VC*
-.vscode
+.idea
+cmake-build-debug/*
+cmake-build-debug-coverage/*
+coverage-report/
 
 #
 # Eclipse
@@ -69,3 +80,15 @@ local.properties
 .project
 .cproject
 
+
+# ==================
+#
+#  CUSTOM
+#
+#  put below your custom ignore rules
+#  for example , if you want to include a
+#  module directly in repositoryyou can do:
+#
+#  !modules/yourmodule
+#
+# ==================

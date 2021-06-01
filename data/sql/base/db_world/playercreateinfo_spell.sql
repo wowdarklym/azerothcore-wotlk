@@ -6,15 +6,15 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 DROP TABLE IF EXISTS `playercreateinfo_spell`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = UTF8MB4 */;
 CREATE TABLE `playercreateinfo_spell` 
 (
-  `racemask` int(10) unsigned NOT NULL DEFAULT '0',
-  `classmask` int(10) unsigned NOT NULL DEFAULT '0',
-  `Spell` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `racemask` INT unsigned NOT NULL DEFAULT 0,
+  `classmask` INT unsigned NOT NULL DEFAULT 0,
+  `Spell` MEDIUMINT unsigned NOT NULL DEFAULT 0,
   `Note` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`racemask`,`classmask`,`Spell`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=UTF8MB4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `playercreateinfo_spell` WRITE;
@@ -61,6 +61,7 @@ INSERT INTO `playercreateinfo_spell` VALUES
 (0,32,10846,'First Aid'),
 (0,32,18629,'Runecloth Bandage'),
 (0,32,18630,'Heavy Runecloth Bandage'),
+(0,32,33388,'Apprentice Riding'),
 (0,32,33391,'Journeyman Riding'),
 (0,32,45462,'Plague Strike'),
 (0,32,45477,'Icy Touch'),

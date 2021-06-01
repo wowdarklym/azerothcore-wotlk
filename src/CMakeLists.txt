@@ -1,4 +1,4 @@
-# Copyright (C) 
+# Copyright (C)
 #
 # This file is free software; as a special exception the author gives
 # unlimited permission to copy and/or distribute it, with or without
@@ -19,12 +19,5 @@ endif()
 add_subdirectory(genrev)
 
 if( SERVERS )
-  set(sources_windows_Debugging
-    ${CMAKE_SOURCE_DIR}/modules/worldengine/nucleus/src/Debugging/WheatyExceptionReport.cpp
-    ${CMAKE_SOURCE_DIR}/modules/worldengine/nucleus/src/Debugging/WheatyExceptionReport.h
-  )
-  add_subdirectory(game)
-  add_subdirectory(authserver)
-  add_subdirectory(scripts)
-  add_subdirectory(worldserver)
+  add_subdirectory(server)
 endif()
